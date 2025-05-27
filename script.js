@@ -17,7 +17,7 @@ document.getElementById("linkForm").onsubmit = async (e) => {
 
   try {
     const docRef = await db.collection("qr_links").add({ links });
-    const previewUrl = `https://venerable-lokum-ab44dd.netlify.app/preview.html?id=${docRef.id}`;
+    const previewUrl = `https://manith003.github.io/qr-project/preview.html?id=${docRef.id}`;
 
     // Generate QR as PNG
     QRCode.toDataURL(previewUrl, { width: 256 }, (err, url) => {

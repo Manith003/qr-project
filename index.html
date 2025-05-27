@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Generator with Downloads</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Generate QR Code</h1>
+  <form id="linkForm">
+    <input type="text" placeholder="Enter Link 1" class="link-input"><br>
+    <input type="text" placeholder="Enter Link 2" class="link-input"><br>
+    <button type="button" id="addLink">+ Add another link</button><br><br>
+    <button type="submit">Generate QR</button>
+  </form>
+
+  <canvas id="qrCanvas" style="display:none;"></canvas>
+  <img id="qrPreview" style="margin-top:20px;" />
+  <div id="downloadBtns" style="display:none; margin-top: 20px;">
+    <button id="downloadPng">Download PNG</button>
+    <button id="downloadSvg">Download SVG</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
